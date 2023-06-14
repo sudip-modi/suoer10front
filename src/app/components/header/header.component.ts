@@ -106,23 +106,23 @@ export class HeaderComponent implements OnInit {
     // call the authservice controller
     this.auth.login(this.signInForm.value).subscribe(
       (res: any) => {
-        console.log(res);
+        // console.log(res);
         setTimeout(() => {
           this.spinner.hide();
         }, 2000);
         // check response code and depending on that redirect to a specific page
         if (res.code == 401 || res.code != 200) {
-        //   console.log('Here is the response object \n');
-          console.log(res);
-        //   console.log('no success response');
+        // console.log('Here is the response object \n');
+          // console.log(res);
+        // console.log('no success response');
           this.snackBar.open(`Please enter Valid data`, '', {
             duration: 3000,
             verticalPosition: 'top',
             horizontalPosition: 'center',
           });
         } else {
-        //   console.log('The response object \n');
-          console.log(res);
+        // console.log('The response object \n');
+          // console.log(res);
           // get the accesstoken for the user
           localStorage.clear();
           let token = res.data.access_token;
@@ -173,7 +173,7 @@ export class HeaderComponent implements OnInit {
     };
     this.auth.register(post).subscribe(
       (res: any) => {
-        console.log(res);
+        // console.log(res);
         setTimeout(() => {
           this.spinner.hide();
         }, 2000);
@@ -181,19 +181,19 @@ export class HeaderComponent implements OnInit {
 
         // if the user is created
         if (res.status == 'ok' && res.code == 200) {
-        //   console.log('Registration successfull');
+        // console.log('Registration successfull');
           this.snackBar.open(`Registered SuccessFully`, '', {
             duration: 3000,
             verticalPosition: 'top',
             horizontalPosition: 'center',
           });
           this.modalService.dismissAll();
-          console.log(this.modalService);
+          // console.log(this.modalService);
           return;
         }
 
         if (res.code == 401 || res.code != 200) {
-            console.log(res.code);
+            // console.log(res.code);
         //   this.snackBar.open(`Please enter Valid data`, '', {
         //     duration: 3000,
         //     verticalPosition: 'top',
@@ -203,7 +203,7 @@ export class HeaderComponent implements OnInit {
           if (res.code == 200) {
             // if message contains error
             if (res.message.error) {
-                console.log(res.message.error);
+                // console.log(res.message.error);
             //   this.snackBar.open(
             //     `Please Enter Valid and Unique Credentials`,
             //     '',
@@ -214,7 +214,7 @@ export class HeaderComponent implements OnInit {
             //     }
             //   );
             } else {
-            //   console.log('Registration successfull');
+            // console.log('Registration successfull');
               this.snackBar.open(`Registered SuccessFully`, '', {
                 duration: 3000,
                 verticalPosition: 'top',
@@ -244,7 +244,7 @@ export class HeaderComponent implements OnInit {
       email: this.forgotPasswordForm.get('email')?.value,
     };
     this.auth.sendresetmail(postData).subscribe((res: any) => {
-      console.log(res);
+      // console.log(res);
       if (res.success) {
         // console.log('Email sent');
         this.modalService.dismissAll();

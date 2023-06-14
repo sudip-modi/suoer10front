@@ -45,8 +45,8 @@ export class GatewayComponent implements OnInit {
     formVal = { ...formVal, method_code: this.code };
     this.payService.initPay(formVal).subscribe(
       (res: any) => {
-        console.log(res);
-        console.log(res.data.deposit.trx);
+        // console.log(res);
+        // console.log(res.data.deposit.trx);
 
         setTimeout(() => {
           this.spinner.hide();
@@ -69,13 +69,13 @@ export class GatewayComponent implements OnInit {
         }
 
         // if ((res.status = 200)) {
-        //   console.log(res);
+        // console.log(res);
         // }
       },
       (err: any) => {
         this.spinner.hide();
         this.modalService.dismissAll();
-        console.log(err);
+        // console.log(err);
       }
     );
   }

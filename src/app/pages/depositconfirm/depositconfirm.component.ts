@@ -52,13 +52,13 @@ export class DepositconfirmComponent implements OnInit {
       });
     
     depositinfo.subscribe((res)=>{
-        console.log(res);
+        // console.log(res);
     },(e: any)=>{
-        console.log(e);
+        // console.log(e);
     })
 
     // console.log(depositinfo);
-    console.log(this.tID);
+    // console.log(this.tID);
   }
 
   confirmDeposit(): void {
@@ -68,8 +68,8 @@ export class DepositconfirmComponent implements OnInit {
     // formVal = { ...formVal, method_code: this.tID };
     this.payService.confirmDeposit(this.tID).subscribe(
       (res: any) => {
-        console.log("HI");
-        console.log(res);
+        // console.log("HI");
+        // console.log(res);
         if(res.data.gateway_data.redirect){
             this.snackBar.open("Successfully confirmed deposit, Please pay on coinbase page",'',{
                 duration: 3000,
@@ -94,7 +94,7 @@ export class DepositconfirmComponent implements OnInit {
       (err: any) => {
         this.spinner.hide();
         this.modalService.dismissAll();
-        console.log(err);
+        // console.log(err);
       }
     );
   }

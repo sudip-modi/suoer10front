@@ -25,9 +25,9 @@ export class DepositComponent implements OnInit {
     }
     // if(item.name=="Coinbase"){
     //     this.payService.initCoinbase().subscribe((res: any)=>{
-    //         console.log(res);
+    //         // console.log(res);
     //     },(err: any)=>{
-    //         console.log(err);
+    //         // console.log(err);
     //     })
     // }
     // this.router.navigateByUrl("/payments/"+item.componentpath);

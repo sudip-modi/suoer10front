@@ -24,8 +24,8 @@ export class AuthService {
 
 //   these functions will be called from the header.component.ts file
   login(data: any) {
-    console.log("Login Service");
-    console.log(this.BASE_URL);
+    // console.log("Login Service");
+    // console.log(this.BASE_URL);
     let res = this.http.post(`${this.BASE_URL}/login?username=` + data.username + '&password=' + data.password, { headers: this.headers });
 
     // let uname = res.data.user.username;

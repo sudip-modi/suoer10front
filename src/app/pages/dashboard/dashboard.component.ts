@@ -58,7 +58,7 @@ export class DashboardComponent implements OnInit {
     this.userService.getDashBoard().subscribe(
       (res) => {
         this.dashData = res;
-        console.log(res);
+        // console.log(res);
         setTimeout(() => {
           this.spinner.hide();
         }, 2000);
@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit {
         //     verticalPosition: 'top',
         //     horizontalPosition: 'center',
         //   });
-        console.log("SERVER ERROR");
+        // console.log("SERVER ERROR");
         }
       }
     );
@@ -121,7 +121,7 @@ export class DashboardComponent implements OnInit {
         }, 2000);
       },
       (err) => {
-        console.log(err);
+        // console.log(err);
         this.spinner.hide();
         if (err.status == 401) {
           this.snackBar.open(`Session Expired`, '', {
@@ -136,7 +136,7 @@ export class DashboardComponent implements OnInit {
         //     verticalPosition: 'top',
         //     horizontalPosition: 'center',
         //   });
-        console.log("SERVER ERROR");
+        // console.log("SERVER ERROR");
         }
       }
     );
@@ -169,7 +169,7 @@ export class DashboardComponent implements OnInit {
         //   verticalPosition: 'top',
         //   horizontalPosition: 'center',
         // });
-        console.log("SERVER ERROR");
+        // console.log("SERVER ERROR");
       }
     );
   }

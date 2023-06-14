@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 		private sanitize: DomSanitizer) { }
 
 	ngOnInit(): void {
-		console.log('hi')
+		// console.log('hi')
 		this.url = this.sanitize.bypassSecurityTrustUrl("https://web.telegram.org/z/");
 		// this.auth.get().subscribe(res=>{
 		// });
@@ -107,19 +107,19 @@ export class HomeComponent implements OnInit {
 	}
 
 	slickInit() {
-		console.log('slick initialized');
+		// console.log('slick initialized');
 	}
 
 	breakpoint() {
-		console.log('breakpoint');
+		// console.log('breakpoint');
 	}
 
 	afterChange() {
-		console.log('afterChange');
+		// console.log('afterChange');
 	}
 
 	beforeChange() {
-		console.log('beforeChange');
+		// console.log('beforeChange');
 	}
 	viewall() {
 		this.router.navigateByUrl("/viewall")

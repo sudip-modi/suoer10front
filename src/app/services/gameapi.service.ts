@@ -54,7 +54,7 @@ export class GameapiService {
       headers: this.gameHeaders,
     });
 
-    console.log(response);
+    // console.log(response);
   }
   //   get lobby
   getGameLobby() {
@@ -79,8 +79,8 @@ export class GameapiService {
     this.http
       .get(`https://super10.live/api/getGames`, { params: getData })
       .subscribe((res: any) => {
-        console.log('Here is the game initialization response');
-        console.log(res);
+        // console.log('Here is the game initialization response');
+        // console.log(res);
       });
   }
 
@@ -104,8 +104,8 @@ export class GameapiService {
     this.http
       .post(`https://super10.live/api/gamesInit`, postData)
       .subscribe((res: any) => {
-        console.log('here is the game initialization response');
-        console.log(res);
+        // console.log('here is the game initialization response');
+        // console.log(res);
         // assigning the game callback url here
         this.gameUrl = res.message.language_data.url;
         this.router.navigateByUrl('/gameview');
@@ -115,7 +115,7 @@ export class GameapiService {
   }
 
   testValidate() {
-    console.log("Testvalidate Api");
+    // console.log("Testvalidate Api");
     // console.log(data);
     // const randomNbr = mt_rand();
     // const uniqId = uniqid(randomNbr, true);
@@ -130,8 +130,8 @@ export class GameapiService {
     this.http
       .post(`${this.BASE_URL}/testValidate`, postData)
       .subscribe((res: any) => {
-        console.log('Here is the test api response');
-        console.log(res);
+        // console.log('Here is the test api response');
+        // console.log(res);
       });
     return this.gameUrl;
   }
@@ -140,7 +140,7 @@ export class GameapiService {
     const randomNbr = mt_rand();
     const uniqId = uniqid(randomNbr, true);
     const uniqId_string = MD5(uniqId).toString();
-    console.log(data.session_id);
+    // console.log(data.session_id);
     data = {
       'X-Merchant-Id': 'ae88ab8ee84ff40a76f1ec2e0f7b5caa',
       'X-Nonce': data.session_id ? data.session_id : uniqId_string,
@@ -148,7 +148,7 @@ export class GameapiService {
       ...data,
     };
     const xSignParams = httpBuildQuery(data);
-    console.log(xSignParams);
+    // console.log(xSignParams);
     const xSign = crypto
       .createHmac('sha1', '4953e491031d3f9e7545223885cf43a7403f14cb')
       .update(xSignParams.toString())

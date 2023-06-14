@@ -44,19 +44,19 @@ export class PasswordresetComponent implements OnInit {
     // call the authservice controller
     this.auth.resetpassword(this.resetPasswordForm.value,this.token).subscribe(
       (res: any) => {
-        console.log(res);
+        // console.log(res);
         // if (res.code == 401 || res.code != 200) {
-        //   console.log('Here is the response object \n');
-        //   console.log(res);
-        //   console.log('no success response');
+        // console.log('Here is the response object \n');
+        // console.log(res);
+        // console.log('no success response');
         //   this.snackBar.open(`Please enter Valid data`, '', {
         //     duration: 3000,
         //     verticalPosition: 'top',
         //     horizontalPosition: 'center',
         //   });
         // } else {
-        //   console.log('The response object \n');
-        //   console.log(res);
+        // console.log('The response object \n');
+        // console.log(res);
         //   const token = res.data.access_token;
         //   this.modalService.dismissAll();
         //   localStorage.setItem('token', JSON.stringify(token));

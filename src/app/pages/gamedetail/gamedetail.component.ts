@@ -62,19 +62,19 @@ export class GamedetailComponent implements OnInit {
 	}
 
 	slickInit() {
-		console.log('slick initialized');
+		// console.log('slick initialized');
 	}
 
 	breakpoint() {
-		console.log('breakpoint');
+		// console.log('breakpoint');
 	}
 
 	afterChange() {
-		console.log('afterChange');
+		// console.log('afterChange');
 	}
 
 	beforeChange() {
-		console.log('beforeChange');
+		// console.log('beforeChange');
 	}
 
 }
